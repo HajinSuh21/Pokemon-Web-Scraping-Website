@@ -2,6 +2,12 @@ from bs4 import BeautifulSoup
 import requests
 from flask import Blueprint, render_template, request
 
+views = Blueprint('views', __name__)
+
+@views.route('/', methods=['GET', 'POST'])
+def home():
+    return render_template("home.html")
+
 sets = Blueprint('sets', __name__)
 
 @sets.route('/celebrations', methods=['GET', 'POST'])
