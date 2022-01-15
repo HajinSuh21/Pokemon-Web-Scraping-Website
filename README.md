@@ -53,6 +53,18 @@ However, if a Pokemon is not included in the particular set, it will return some
 ![image](https://user-images.githubusercontent.com/97658524/149619639-5e470ebe-e967-4aae-8711-6992603ecdd6.png)
 
 # What I Enjoyed About This Project
+- I got to learn so many new things-I've never worked with HTML, CSS, Python, and BeautifulSoup4 before.
+- I found myself always trying to add new things like hover capabilities on the search/navigation bars to make the website look cooler.
+- It was more than HTML/CSS design, I got to use problem-solving in figuring out how to get data from another website and only output it under certain conditions (whenever I figured something out, it felt refreshing).
+- I used what I learned from CS courses at Vanderbilt to aid me in solving these problems (booleans, for-loops, lists, if-statements, and even debugging).
+- Although this may seem simple for many others, I feel very proud of myself for being able to complete my vision-I've always wanted to try create something like this.
+- Overall, this was an awesome project because I combined two things I love (Pokemon + Coding).
 
-# Mistakes/Fixes:
-Flask - static folder
+# Problems/Solutions:
+- In Flask, it is necessary for CSS and images to go into a folder named "static".  I did not know this and for 3 hours, I was stuck figuring out why my CSS wasn't applying to my HTML pages
+- I had to figure out a way to check if the input Pokemon was in the set.  So, I used lists and appended to store the Pokemon's name, number, and price from the tcgplayer.com site.  Then, I used a for-loop to check if the Pokemon was in the set.
+- At one point, the error message: "___ was not found in this set, please try again" popped up even though I hadn't inputted anything in the search bar.  In order to fix this, I used a boolean to keep track of whether or not the Pokemon was found.  I used a second boolean to keep track of whether or not the Pokemon was not found.  Then, I only printed the error message when both booleans were set to True.
+- Many more problems...
+
+# Future Aspirations:
+Since there is no written database and the data is taken externally, it was difficult to figure out a way to put pictures along with each output (looks kind of boring as of now!).  In the future, I'd like to find a way to add pictures and make the website more fun.
