@@ -1,15 +1,19 @@
+#required installs
 from bs4 import BeautifulSoup
 import requests
 from flask import Blueprint, render_template, request
 
-views = Blueprint('views', __name__)
+sets = Blueprint('sets', __name__)
 
-@views.route('/', methods=['GET', 'POST'])
+#defines home page functionalities
+#just returns the home page
+@sets.route('/', methods=['GET', 'POST'])
 def home():
     return render_template("home.html")
 
-sets = Blueprint('sets', __name__)
-
+#defines celebrations page functionalities
+#returns the pokemon's name, number, price and if it's in the celebrations set
+#also points to the celebrations html page
 @sets.route('/celebrations', methods=['GET', 'POST'])
 def celebrations():
     name = ""
@@ -22,6 +26,7 @@ def celebrations():
     if request.method == 'POST':
         pokemon = request.form.get('pokemon')
 
+        #scrapes data from the tcgplayer website
         html_text = requests.get('https://shop.tcgplayer.com/price-guide/pokemon/celebrations-classic-collection').text
         soup = BeautifulSoup(html_text, 'lxml')
         cards = soup.find_all('td', class_ = 'product')
@@ -31,7 +36,8 @@ def celebrations():
         nameList = [""]
         numberList = [""]
         priceList = [""]
- 
+
+        #appends all the pokemon's data into 3 different lists
         for card in cards:
             name = card.find('div', class_ = 'productDetail').text
             nameList.append(name)
@@ -43,18 +49,21 @@ def celebrations():
         for ps in p:
             price = ps.find('div', class_ = 'cellWrapper').text.replace(' ', '')
             priceList.append(price)
- 
+
+        #checks if the input is in the list
         for i in range(len(nameList)):
             if str(pokemon).lower() in nameList[i].lower() and not str(pokemon) == "":
-                name = (f"Name: {nameList[i].strip()}")
-                number = (f"Number: {numberList[i].strip()}")
-                price = (f"Price: {priceList[i].strip()}")
+                name = (nameList[i].strip().upper())
+                number = (f"Set Number: {numberList[i].strip()}")
+                price = (f"Current Price: {priceList[i].strip()}")
                 found = True
             else:
                 b = True
 
+    #returns the celebrations page and associated variables
     return render_template("celebrations.html", name = name, number = number, price = price, found = found, b = b, packPrice = packPrice)
 
+#same functionalities as the celebrations page, just with a different name/set
 @sets.route('/fusion-strike', methods=['GET', 'POST'])
 def fusion_strike():
     name = ""
@@ -90,14 +99,15 @@ def fusion_strike():
  
         for i in range(len(nameList)):
             if str(pokemon).lower() in nameList[i].lower() and not str(pokemon) == "":
-                name = (f"Name: {nameList[i].strip()}")
-                number = (f"Number: {numberList[i].strip()}")
-                price = (f"Price: {priceList[i].strip()}")
+                name = (nameList[i].strip().upper())
+                number = (f"Set Number: {numberList[i].strip()}")
+                price = (f"Current Price: {priceList[i].strip()}")
                 found = True
             else:
                 b = True
     return render_template("fusion.html", name = name, number = number, price = price, found = found, b = b)
 
+#same functionalities as the celebrations page, just with a different name/set
 @sets.route('/evolving-skies', methods=['GET', 'POST'])
 def evolving_skies():
     name = ""
@@ -133,9 +143,9 @@ def evolving_skies():
  
         for i in range(len(nameList)):
             if str(pokemon).lower() in nameList[i].lower() and not str(pokemon) == "":
-                name = (f"Name: {nameList[i].strip()}")
-                number = (f"Number: {numberList[i].strip()}")
-                price = (f"Price: {priceList[i].strip()}")
+                name = (nameList[i].strip().upper())
+                number = (f"Set Number: {numberList[i].strip()}")
+                price = (f"Current Price: {priceList[i].strip()}")
                 found = True
             else:
                 b = True
