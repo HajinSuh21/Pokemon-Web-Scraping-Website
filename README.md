@@ -10,7 +10,7 @@ HTML, CSS, Python, Web Scraping
 This website takes data from an external Pokemon Price website that constantly updates due to supply and demand.  For my first project, I wanted a way to simply choose which Pokemon set I would like to view prices for an individual card for and search for the specific card in a search bar.  I also wanted to create this functionality in a form of a website.  The resulting project is a website that is styled using HTML and CSS and has functionalities that were created with Python and Web Scraping.
 
 # Get Started:
-## Prequesites:
+## Prerequisites:
 - Python
 - pip
 
@@ -35,6 +35,8 @@ The Pokeball is clickable and returns you to the home page.
 Each set (Celebrations, Fusion Strike, and Evolving Skies) are clickable and will lead to their respective html pages.
 
 # Example Page - Celebrations
+
+# What I Enjoyed About This Project
 
 # Mistakes/Fixes:
 Flask - static folder
