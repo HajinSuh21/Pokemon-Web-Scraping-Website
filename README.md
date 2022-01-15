@@ -49,8 +49,8 @@ The search bar will return the input's desired Pokemon's name, number in the set
 For example, since Charizard is in the Celebrations Set, it is a valid input and returns as of 1/15/2022 @ 1:06am...
 ![image](https://user-images.githubusercontent.com/97658524/149619466-17bc4405-7b7b-405f-b9d0-086e349bb2f0.png)
 
-However, if a Pokemon is not included in the particular set, it will return...
-
+However, if a Pokemon is not included in the particular set, it will return something like...
+![image](https://user-images.githubusercontent.com/97658524/149619639-5e470ebe-e967-4aae-8711-6992603ecdd6.png)
 
 # What I Enjoyed About This Project
 
