@@ -58,8 +58,8 @@ def celebrations():
                 price = (f"Current Price: {priceList[i].strip()}")
                 found = True
             else:
+                name = str(pokemon)
                 b = True
-
     #returns the celebrations page and associated variables
     return render_template("celebrations.html", name = name, number = number, price = price, found = found, b = b, packPrice = packPrice)
 
@@ -105,6 +105,7 @@ def fusion_strike():
                 found = True
             else:
                 b = True
+                name = str(pokemon)
     return render_template("fusion.html", name = name, number = number, price = price, found = found, b = b)
 
 #same functionalities as the celebrations page, just with a different name/set
@@ -149,4 +150,5 @@ def evolving_skies():
                 found = True
             else:
                 b = True
+                name = str(pokemon)
     return render_template("evolving.html", name = name, number = number, price = price, found = found, b = b)
