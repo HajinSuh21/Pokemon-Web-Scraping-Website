@@ -31,10 +31,13 @@ program and it will create a http port.  Click and open the port on browser.
 The home page looks like this...
 ![image](https://user-images.githubusercontent.com/97658524/149619199-c66202d3-02ad-4026-a602-a155bbe05ffa.png)
 ![image](https://user-images.githubusercontent.com/97658524/149619205-55f6fde3-10d8-406c-9766-04ff95cd97e9.png)
-The Pokeball is clickable and returns you to the home page.
+The Pokeball is clickable and returns to the home page.
 Each set (Celebrations, Fusion Strike, and Evolving Skies) are clickable and will lead to their respective html pages.
 
 # Example Page - Celebrations
+![image](https://user-images.githubusercontent.com/97658524/149619283-3001c801-5757-4a4b-9c9d-2bcd2c63d3cc.png)
+The search bar takes user input and is expandable.
+The menu is also expandable and takes the user to different pages.
 
 # What I Enjoyed About This Project
 
