@@ -36,8 +36,10 @@ Each set (Celebrations, Fusion Strike, and Evolving Skies) are clickable and wil
 
 # Example Page - Celebrations
 ![image](https://user-images.githubusercontent.com/97658524/149619283-3001c801-5757-4a4b-9c9d-2bcd2c63d3cc.png)
-The search bar takes user input and is expandable.
+The search bar takes user input and is expandable when the user's mouse hovers it.
 The menu is also expandable and takes the user to different pages.
+![image](https://user-images.githubusercontent.com/97658524/149619328-44173204-d93b-494e-a728-8c5d4620578d.png)
+![image](https://user-images.githubusercontent.com/97658524/149619352-c8c98b65-e8f8-4333-9840-e8654f5511db.png)
 
 # What I Enjoyed About This Project
 
