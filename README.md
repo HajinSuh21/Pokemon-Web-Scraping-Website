@@ -61,7 +61,7 @@ However, if a Pokemon is not included in the particular set, it will return some
 - Overall, this was an awesome project because I combined two things I love (Pokemon + Coding).
 
 # Problems/Solutions:
-- In Flask, it is necessary for CSS and images to go into a folder named "static".  I did not know this and for 3 hours, I was stuck figuring out why my CSS wasn't applying to my HTML pages
+- In Flask, it is necessary for CSS and images to go into a folder named "static".  I did not know this and for 3 hours, I was stuck figuring out why my CSS wasn't applying to my HTML pages.
 - I had to figure out a way to check if the input Pokemon was in the set.  So, I used lists and appended to store the Pokemon's name, number, and price from the tcgplayer.com site.  Then, I used a for-loop to check if the Pokemon was in the set.
 - At one point, the error message: "___ was not found in this set, please try again" popped up even though I hadn't inputted anything in the search bar.  In order to fix this, I used a boolean to keep track of whether or not the Pokemon was found.  I used a second boolean to keep track of whether or not the Pokemon was not found.  Then, I only printed the error message when both booleans were set to True.
 - Many more problems...
