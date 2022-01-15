@@ -1,32 +1,52 @@
-{% extends "base.html" %}
-{% block title %}Evolving Skies!{% endblock %}
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="static/evolvingStyle.css">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <script src="https://kit.fontawesome.com/f39abaec7d.js" crossorigin="anonymous"></script>
 
-{% block content %}
-<h1>Look Up Prices for Evolving Skies!</h1>
-<form method="POST">
-    <div class="form-group">
-        <label for="pokemon">Pokemon</label>
-        <input
-            type="text"
-            class="form-control"
-            id="pokemon"
-            name="pokemon"
-            placeholder="Enter Pokemon">
+  <title>
+    Evolving Skies Price Search!
+  </title>
+  <h1><a href="/evolving-skies"><img src="static/evolvinglogo.png"></a></h1>
+</head>
+  <body>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+      <header class="n">MENU</header>
+      <ul>
+        <li><a class="nav" href= "/"><i class="fas fa-home"></i> Home</a></li>
+        <li><a class="nav" href= "/celebrations"><i class="fas fa-birthday-cake"></i> Celebrations</a></li>
+        <li><a class="nav" href= "/fusion-strike"><i class="fas fa-fist-raised"></i> Fusion Strike</a></li>
+        <li><a class="nav" href= "/evolving-skies"><i class="fab fa-skyatlas"></i> Evolving Skies</a></li>
+      </ul>
     </div>
-    <button type="submit" name="button" class="btn btn-primary">Submit</button>
-    <br/>
-    <br/>
-
-    {% if found %}
-    {% if name %}
-    <h5>{{ name }}</h5>
-    <h5>{{ number }}</h5>
-    <h5>{{ price }}</h5>
-      {% endif %}
-
-    {% elif not found and b %}
-        <h5>Card not found, please try again</h5>
-      {% endif %}
-
-</form>
-{% endblock %}
+  <form method="POST">
+      <div class="search-box">
+          <input class="search-txt" type="text" id="pokemon" name="pokemon" placeholder="Enter Pokemon">
+          <button type="submit" class="search-btn">
+            <i class="fas fa-search-dollar fa-2x"></i>
+          </button>
+      </div>
+      <br/>
+      <br/>
+      
+      <div class="info">
+        {% if found %}
+        {% if name %}
+        <p>{{ name }}</p>
+        <p>{{ number }}</p>
+        <p>{{ price }}</p>
+          {% endif %}
+    
+        {% elif not found and b %}
+            <p>Card not found in this set, please try again</p>
+          {% endif %}
+      </div>
+  </form>
+</body>
+</html>
