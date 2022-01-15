@@ -43,8 +43,8 @@
         <p>{{ price }}</p>
           {% endif %}
     
-        {% elif not found and b %}
-            <p>"{{ name }}" not found in this set, please try again</p>
+        {% elif not found and notFound %}
+            <p>"{{ wrongName }}" not found in this set, please try again</p>
           {% endif %}
       </div>
   </form>
