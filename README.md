@@ -27,5 +27,8 @@ main.py
 ```
 program and it will create a http port.  Click and open the port on browser.
 
+# ![image](https://user-images.githubusercontent.com/97658524/149619199-c66202d3-02ad-4026-a602-a155bbe05ffa.png)
+![image](https://user-images.githubusercontent.com/97658524/149619205-55f6fde3-10d8-406c-9766-04ff95cd97e9.png)
+
 # Mistakes/Fixes:
 Flask - static folder
