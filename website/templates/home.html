@@ -1,6 +1,38 @@
-{% extends "base.html" %}
-{% block title %}Pokemon Price Check{% endblock %}
-
-{% block content %}
-<h1>Welcome!</h1>
-{% endblock %}
+<!DOCTYPE html>
+<html>
+    <head>
+    <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <title>Pokemon Price Search!</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="static/homeStyle.css"/>
+    <meta charset="UTF-8">
+        
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Titillium+Web&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="/">
+                    <img src="static/pokeball-png-45330.png" height=100 name="logo" class="logo">
+                </a>
+            </div>
+        </header>
+        Choose Your Set Below!
+        <style>
+            body {
+                background-image: url('static/pokemon-in-the-wild.png')
+            }
+        </style>
+        <div class="container">
+            <a class="celebrations" href="/celebrations">
+                <img src="static/celebrationslogo.png" class="cLogo">
+            </a>
+            <a class="fusion" href="/fusion-strike">
+                <img src="static/fusionlogo.png" class="fLogo">
+            </a>
+            <a class="evolving" href="/evolving-skies">
+                <img src="static/evolvinglogo.png" class="eLogo">
+            </a>
+        </div>
+    </body>
+</html>
