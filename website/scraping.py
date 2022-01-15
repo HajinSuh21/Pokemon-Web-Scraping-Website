@@ -19,9 +19,8 @@ def celebrations():
     name = ""
     number = ""
     price = ""
-    packPrice = ""
     found = False
-    b = False
+    notFound = False
 
     if request.method == 'POST':
         pokemon = request.form.get('pokemon')
@@ -59,9 +58,9 @@ def celebrations():
                 found = True
             else:
                 name = str(pokemon)
-                b = True
+                notFound = True
     #returns the celebrations page and associated variables
-    return render_template("celebrations.html", name = name, number = number, price = price, found = found, b = b, packPrice = packPrice)
+    return render_template("celebrations.html", name = name, number = number, price = price, found = found, notFound = notFound)
 
 #same functionalities as the celebrations page, just with a different name/set
 @sets.route('/fusion-strike', methods=['GET', 'POST'])
@@ -70,7 +69,7 @@ def fusion_strike():
     number = ""
     price = ""
     found = False
-    b = False
+    notFound = False
 
     if request.method == 'POST':
         pokemon = request.form.get('pokemon')
@@ -104,9 +103,9 @@ def fusion_strike():
                 price = (f"Current Price: {priceList[i].strip()}")
                 found = True
             else:
-                b = True
-                name = str(pokemon)
-    return render_template("fusion.html", name = name, number = number, price = price, found = found, b = b)
+                notFound = True
+                name = str(pokemon)     
+    return render_template("fusion.html", name = name, number = number, price = price, found = found, notFound = notFound)
 
 #same functionalities as the celebrations page, just with a different name/set
 @sets.route('/evolving-skies', methods=['GET', 'POST'])
@@ -115,7 +114,7 @@ def evolving_skies():
     number = ""
     price = ""
     found = False
-    b = False
+    notFound = False
 
     if request.method == 'POST':
         pokemon = request.form.get('pokemon')
@@ -149,6 +148,6 @@ def evolving_skies():
                 price = (f"Current Price: {priceList[i].strip()}")
                 found = True
             else:
-                b = True
+                notFound = True
                 name = str(pokemon)
-    return render_template("evolving.html", name = name, number = number, price = price, found = found, b = b)
+    return render_template("evolving.html", name = name, number = number, price = price, found = found, notFound = notFound)
