@@ -34,12 +34,23 @@ The home page looks like this...
 The Pokeball is clickable and returns to the home page.
 Each set (Celebrations, Fusion Strike, and Evolving Skies) are clickable and will lead to their respective html pages.
 
-# Example Page - Celebrations
+# Example Page - Celebrations Page
 ![image](https://user-images.githubusercontent.com/97658524/149619283-3001c801-5757-4a4b-9c9d-2bcd2c63d3cc.png)
+
 The search bar takes user input and is expandable when the user's mouse hovers it.
 ![image](https://user-images.githubusercontent.com/97658524/149619328-44173204-d93b-494e-a728-8c5d4620578d.png)
+
 The menu is also expandable and takes the user to different pages.
-![image](https://user-images.githubusercontent.com/97658524/149619352-c8c98b65-e8f8-4333-9840-e8654f5511db.png)
+![image](https://user-images.githubusercontent.com/97658524/149619390-b5e28ff9-549d-4316-83dd-5752ff38b184.png)
+
+# Example Output - Celebrations Page
+The search bar will return the input's desired Pokemon's name, number in the set, and its current updated price.  Prices always change so it's important that my site reflects the current data (which it fulfills through Web Scraping).
+
+For example, since Charizard is in the Celebrations Set, it is a valid input and returns as of 1/15/2022 @ 1:06am...
+![image](https://user-images.githubusercontent.com/97658524/149619466-17bc4405-7b7b-405f-b9d0-086e349bb2f0.png)
+
+However, if a Pokemon is not included in the particular set, it will return...
+
 
 # What I Enjoyed About This Project
 
