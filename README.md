@@ -1,7 +1,7 @@
 # Pokemon-Web-Scraping-Website
-My first personal project
-Scrapes tcgplayer.com for updated prices on Pokemon cards
-Displays the data in a user friendly website
+- My first personal project
+- Scrapes tcgplayer.com for updated prices on Pokemon cards
+- Displays the data in a user friendly website
 
 # Skills:
 HTML, CSS, Python, Web Scraping
